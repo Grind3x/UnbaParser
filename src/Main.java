@@ -4,7 +4,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Parsing valid URLs...");
-        List<String> validUrls = Service.checkURLs("http://erau.unba.org.ua/profile/",10000,10100);
+        List<String> validUrls = Service.checkURLs("http://erau.unba.org.ua/profile/",1,100000);
         System.out.println("---- > OK");
         System.out.println("Saving list of URLs to .json file...");
         Service.listToJSON(validUrls, new File("ValidURLs.json"));
