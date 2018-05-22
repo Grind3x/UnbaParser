@@ -4,6 +4,8 @@ public class Lawyer {
     private String fullName;
     private String region;
     private String certificateNumber;
+    private String certificateDate;
+    private String lawyerForm;
     private String address;
     private String phoneNuberOne;
     private String phoneNuberTwo;
@@ -12,10 +14,12 @@ public class Lawyer {
     public Lawyer() {
     }
 
-    public Lawyer(String fullName, String region, String certificateNumber, String address, String phoneNuberOne, String phoneNuberTwo, String email) {
+    public Lawyer(String fullName, String region, String certificateNumber, String certificateDate, String lawyerForm, String address, String phoneNuberOne, String phoneNuberTwo, String email) {
         this.fullName = fullName;
         this.region = region;
         this.certificateNumber = certificateNumber;
+        this.certificateDate = certificateDate;
+        this.lawyerForm = lawyerForm;
         this.address = address;
         this.phoneNuberOne = phoneNuberOne;
         this.phoneNuberTwo = phoneNuberTwo;
@@ -44,6 +48,22 @@ public class Lawyer {
 
     public void setCertificateNumber(String certificateNumber) {
         this.certificateNumber = certificateNumber;
+    }
+
+    public String getCertificateDate() {
+        return certificateDate;
+    }
+
+    public void setCertificateDate(String certificateDate) {
+        this.certificateDate = certificateDate;
+    }
+
+    public String getLawyerForm() {
+        return lawyerForm;
+    }
+
+    public void setLawyerForm(String lawyerForm) {
+        this.lawyerForm = lawyerForm;
     }
 
     public String getAddress() {
@@ -86,6 +106,8 @@ public class Lawyer {
         return Objects.equals(fullName, lawyer.fullName) &&
                 Objects.equals(region, lawyer.region) &&
                 Objects.equals(certificateNumber, lawyer.certificateNumber) &&
+                Objects.equals(certificateDate, lawyer.certificateDate) &&
+                Objects.equals(lawyerForm, lawyer.lawyerForm) &&
                 Objects.equals(address, lawyer.address) &&
                 Objects.equals(phoneNuberOne, lawyer.phoneNuberOne) &&
                 Objects.equals(phoneNuberTwo, lawyer.phoneNuberTwo) &&
@@ -95,7 +117,7 @@ public class Lawyer {
     @Override
     public int hashCode() {
 
-        return Objects.hash(fullName, region, certificateNumber, address, phoneNuberOne, phoneNuberTwo, email);
+        return Objects.hash(fullName, region, certificateNumber, certificateDate, lawyerForm, address, phoneNuberOne, phoneNuberTwo, email);
     }
 
     @Override
@@ -104,6 +126,8 @@ public class Lawyer {
                 "fullName='" + fullName + '\'' +
                 ", region='" + region + '\'' +
                 ", certificateNumber='" + certificateNumber + '\'' +
+                ", certificateDate='" + certificateDate + '\'' +
+                ", lawyerForm='" + lawyerForm + '\'' +
                 ", address='" + address + '\'' +
                 ", phoneNuberOne='" + phoneNuberOne + '\'' +
                 ", phoneNuberTwo='" + phoneNuberTwo + '\'' +
